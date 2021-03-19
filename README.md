@@ -1,25 +1,47 @@
 # test2
 
-## Project setup
+## Project setup on windows
+### Create remote repo, ssh keys, check git config
 ```
-npm install
+https://sergeyvasin.net/2017/03/30/git-ssh/
+git config --global user.email ""
+git config --global user.name ""
+```
+### Create vuetify project
+```
+vue create my-app
+cd my-app
+vue add vuetify
+```
+### Init local repo and link it to remote
+```
+git init
+git add ./
+git commit
+git branch -M main
+git remote add origin git@github.com:CHERNOMORGAMES/test2.git
+git push -u origin main
 ```
 
-### Compiles and hot-reloads for development
+### Comment or remove /dist in .gitignore
 ```
-npm run serve
+# /dist
 ```
-
-### Compiles and minifies for production
+### Add publicPath in vue.config.js
 ```
-npm run build
+module.exports = {
+	publicPath: '/test2',
+  transpileDependencies: [
+    'vuetify'
+  ]
+}
 ```
-
-### Lints and fixes files
+### Create deploy.sh file in project root
 ```
-npm run lint
+https://cli.vuejs.org/ru/guide/deployment.html#github-pages
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-#test2
+### Edit and Run deploy.sh
+```
+deploy.sh
+```
+### Check GH pages settings on github.com
