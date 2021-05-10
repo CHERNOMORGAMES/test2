@@ -45,3 +45,5 @@ https://cli.vuejs.org/ru/guide/deployment.html#github-pages
 deploy.sh
 ```
 ### Check GH pages settings on github.com
+
+Выполнено: Chernomor.
